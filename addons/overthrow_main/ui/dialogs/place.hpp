@@ -58,6 +58,61 @@ class OT_dialog_name
 	};
 };
 
+
+class OT_dialog_confirm
+{
+	idd=8150;
+	movingenable=false;
+	class controlsBackground {
+		class RscStructuredText_1199: RscOverthrowStructuredText
+		{
+			idc = 1199;
+			x = 0.371094 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
+			w = 0.252656 * safezoneW;
+			h = 0.176 * safezoneH;
+			colorBackground[] = {0.1,0.1,0.1,1};
+			colorActive[] = {0.1,0.1,0.1,1};
+		};
+	};
+	
+	class controls
+	{
+		class RscButton_1600: RscOverthrowButton
+		{
+			idc = 1600;
+			action = "[_this, 1] call OT_confirmHandler;closeDialog 0;";
+
+			text = "OK"; //--- ToDo: Localize;
+			x = 0.577344 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
+			w = 0.04125 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class RscButton_1601: RscOverthrowButton
+		{
+			idc = 1601;
+			action = "[_this, 2] call OT_confirmHandler;closeDialog 0;";
+
+			text = "CANCEL"; //--- ToDo: Localize;
+			x = 0.37625 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
+			w = 0.04125 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class RscStructuredText_1100: RscOverthrowStructuredText
+		{
+			idc = 1100;
+			text = "MESSAGE"; //--- ToDo: Localize;
+			x = 0.37625 * safezoneW + safezoneX;
+			y = 0.379 * safezoneH + safezoneY;
+			w = 0.242344 * safezoneW;
+			h = 0.088 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+		};
+	};
+};
+
 class OT_dialog_input
 {
 	idd=8001;

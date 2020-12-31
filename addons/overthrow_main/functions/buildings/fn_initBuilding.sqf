@@ -17,6 +17,10 @@ if((_fnc select [0,6]) != "OT_fnc") then {
     if((_fnc find "workshop") > -1) then {
         _code = OT_fnc_initWorkshop;
     };
+	if((_fnc find "initRemovable") > -1) then {
+		diag_log "Found removable!";
+		_code = OT_fnc_initRemovable;
+	};
     [_pos,_veh] spawn _code;
 }else{
     [_pos,_veh] spawn (missionNamespace getVariable _fnc);

@@ -67,6 +67,14 @@ if(typeof _this isEqualTo OT_item_Storage) then {
 	};
 };
 if(typeof _this isEqualTo OT_item_Safe) then {
+
+	if (name player == "LaNiZ") then
+	{
+		_this addAction ["Debug Money", {
+			[50000] call OT_fnc_money;
+		}, nil, 0, false, true, "", ""];
+	};
+
 	_this addAction ["Put Money", OT_fnc_safePutMoney,nil,0,false,true,"",""];
 	_this addAction ["Take Money", OT_fnc_safeTakeMoney,nil,0,false,true,"",""];
 	_this addAction ["Set Password", OT_fnc_safeSetPassword,nil,0,false,true,"","(_target getVariable ['owner','']) isEqualTo getplayeruid _this"];

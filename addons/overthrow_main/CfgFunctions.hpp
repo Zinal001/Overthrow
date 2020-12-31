@@ -191,6 +191,9 @@ class CfgFunctions
 			class craftDialog {};
 			class uploadData {};
 			class logisticsDialog {};
+			
+			/* Zinal */
+			class confirmDialog {};
 		};
 
 		class Display
@@ -308,6 +311,9 @@ class CfgFunctions
 			class vehicleCanMove {};
 			class unflipVehicle {};
 			class triggerBattle {};
+			
+			/* Zinal */
+			class addRemoveMenu {};
 
 		};
 
@@ -605,6 +611,9 @@ class CfgFunctions
 			class initTrainingCamp {};
 			class initWarehouse {};
 			class initRadar {};
+			
+			/* Zinal */
+			class initRemovable {};
 		};
 
         class Util
